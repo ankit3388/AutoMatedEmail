@@ -16,9 +16,11 @@ with open("index.html", "r", encoding="utf-8") as file:
     
     
 # Email credentials
-your_email = "ankityd0703@gmail.com"
-your_app_password = "meibdgzhjtvvjazl"  # Use Gmail App Password
-resume_link = "https://drive.google.com/file/d/1qFf1IJ7YlMwOAzjuXP6UFYhRLY-j1d3_/view?usp=drive_link"
+your_email = "Your Email"  # Use your Gmail address
+# For Gmail, you need to create an App Password if you have 2-Step Verification enabled.
+#https://youtu.be/hXiPshHn9Pw?si=kaFtLhKmpkZShf_P
+your_app_password = "12 letter Password from your email"  # Use Gmail App Password
+resume_link = "Resume Link"
 
 # Start SMTP server
 server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -27,13 +29,22 @@ server.login(your_email, your_app_password)
 
 # Loop through each row and send email
 
-resume_link = "https://drive.google.com/file/d/1qFf1IJ7YlMwOAzjuXP6UFYhRLY-j1d3_/view?usp=sharing"
-leetcode_link = "https://leetcode.com/u/ankit_3388/"
-codeforces_link = "https://codeforces.com/profile/Ankit3388"
-codechef_link = "https://www.codechef.com/users/ankit3388"
-gfg_link = "https://auth.geeksforgeeks.org/user/err/practice"
-linkedin_link = "https://linkedin.com/in/your-link"
-github_link = "https://github.com/ankit3388"
+# resume_link = "https://drive.google.com/file/d/1qFf1IJ7YlMwOAzjuXP6UFYhRLY-j1d3_/view?usp=sharing"
+# leetcode_link = "https://leetcode.com/u/ankit_3388/"
+# codeforces_link = "https://codeforces.com/profile/Ankit3388"
+# codechef_link = "https://www.codechef.com/users/ankit3388"
+# gfg_link = "https://auth.geeksforgeeks.org/user/err/practice"
+# linkedin_link = "https://linkedin.com/in/your-link"
+# github_link = "https://github.com/ankit3388"
+
+resume_link="Add resume link"
+leetcode_link="Add leetcode link"
+codeforces_link="Add codeforces link"
+codechef_link="Add codechef link"
+gfg_link="Add gfg link"
+linkedin_link="Add linkedin link"
+github_link="Add github link"
+
 
 
 for _, row in df.iterrows():
