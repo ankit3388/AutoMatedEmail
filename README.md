@@ -6,12 +6,13 @@ This is a Python-based automated email script that sends **customized job referr
 
 ## ✨ Features
 
-- Automatically sends personalized referral request emails to recruiters.
+- Automatically sends personalized **referral request emails** to recruiters.
 - Sends **gentle reminder emails** if specified in the Excel file.
+- **Skips** sending emails if marked as `done` in the Reminder column.
 - Reads recruiter details from an Excel spreadsheet.
-- Sends emails using **Gmail SMTP server**.
-- Uses **HTML templates** for professional formatting.
-- Supports clickable resume, LinkedIn, GitHub, and coding profile links.
+- Uses **Gmail SMTP** for email delivery.
+- Includes clickable links to Resume, LinkedIn, GitHub, and coding profiles.
+- Uses elegant **HTML templates** for formatting.
 
 ---
 
@@ -54,8 +55,9 @@ John Doe	             john@example.com	      Google	         https://link	      
 Jane Smith	          jane@example.com	      Amazon	         https://link	      Yes
 ```
 
-If Reminder = Yes, the script sends a follow-up using reminder.html.
- If Reminder = No, it sends the initial mail using index.html.
+- If Reminder = Yes, the script sends a follow-up using reminder.html.
+- If Reminder = No, it sends the initial mail using index.html.
+- If Reminder = Done, No email is sent
 
 📜 How to Use
 ```
