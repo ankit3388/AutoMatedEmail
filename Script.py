@@ -9,7 +9,9 @@ from email.utils import formataddr
 
 
 # Load recruiter data from local Excel file
-df = pd.read_excel("F:\DownloadF\Recuriter_Detail.xlsx")  # Make sure this path is correct
+# Make sure to change the path to your actual file location
+# df = pd.read_excel("F:\DownloadF\Recuriter_Detail.xlsx")  # Make sure this path is correct
+df = pd.read_excel("Your data location ")  # Make sure this path is correct
 
 with open("index.html", "r", encoding="utf-8") as file:
     html_template = file.read()
@@ -75,9 +77,9 @@ for _, row in df.iterrows():
     msg.attach(MIMEText(email_body, "html"))
     try:
         server.sendmail(your_email, email, msg.as_string())
-        print(f"✅ Email sent to {name} at {company}")
+        print(f"Email sent to {name} at {company}")
     except Exception as e:
-        print(f"❌ Failed to send to {name}: {e}")
+        print(f"Failed to send to {name}: {e}")
 
 # Quit the server
 server.quit()
